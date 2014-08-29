@@ -1099,6 +1099,7 @@
     	bundle-usersearch,
         bundle-plugin-propertieseditor,bundle-plugin-accountinfo,
         bundle-plugin-connectioninfo,
+        bundle-plugin-ciscodirectory,
         bundle-guava,bundle-hsql,bundle-slf4j"/>
 
     <!--BUNDLE-SC-LAUNCHER-->
@@ -2979,6 +2980,16 @@ org.bouncycastle.util"/>
             manifest="${src}/net/java/sip/communicator/plugin/propertieseditor/propertieseditor.manifest.mf">
             <zipfileset dir="${dest}/net/java/sip/communicator/plugin/propertieseditor"
                 prefix="net/java/sip/communicator/plugin/propertieseditor"/>
+        </jar>
+    </target>
+
+    <!-- BUNDLE-CISCO_DIRECTORY PLUGIN -->
+    <target name="bundle-plugin-ciscodirectory">
+        <!-- Creates a bundle for the plugin SIP Account Registration Wizard.-->
+        <jar compress="false" destfile="${bundles.dest}/ciscodirectory.jar"
+             manifest="${src}/net/java/sip/communicator/plugin/ciscodirectory/ciscodirectory.manifest.mf">
+            <zipfileset dir="${dest}/net/java/sip/communicator/plugin/ciscodirectory"
+                        prefix="net/java/sip/communicator/plugin/ciscodirectory"/>
         </jar>
     </target>
 </project>
